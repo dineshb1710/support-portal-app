@@ -75,7 +75,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    
+
     <!-- Build Configuration goes here -->
     <build>
         <plugins>
