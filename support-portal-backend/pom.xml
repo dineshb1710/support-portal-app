@@ -21,6 +21,7 @@
         <common.lang3.version>3.12.0</common.lang3.version>
         <javax.mail.version>1.6.2</javax.mail.version>
         <guava.version>31.1-jre</guava.version>
+        <lombok.version>1.18.20</lombok.version>
     </properties>
 
     <!-- Dependencies goes here -->
@@ -63,7 +64,12 @@
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -82,6 +88,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
             </plugin>
         </plugins>
     </build>

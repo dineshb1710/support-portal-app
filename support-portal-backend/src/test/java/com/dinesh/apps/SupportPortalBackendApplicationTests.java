@@ -1,4 +1,4 @@
-package com.dinesh.apps.supportportalbackend;
+package com.dinesh.apps;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
